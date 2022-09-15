@@ -1,4 +1,4 @@
-(() => {
+const initMenu = () => {
   const burgerBtnRef = document.querySelector(".burger-btn");
   const mobileMenuRef = document.querySelector(".menu");
 
@@ -16,4 +16,6 @@
     burgerBtnRef.classList.toggle("open");
     mobileMenuRef.classList.toggle("is-hidden");
   });
-})();
+};
+
+export { initMenu };
