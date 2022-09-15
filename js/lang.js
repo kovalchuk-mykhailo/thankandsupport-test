@@ -3,32 +3,10 @@ import ua from "../locals/ua.json" assert { type: "json" };
 import en from "../locals/en.json" assert { type: "json" };
 
 (() => {
-  const initMenu = () => {
-    const burgerBtnRef = document.querySelector(".burger-btn");
-    const mobileMenuRef = document.querySelector(".menu");
-
-    document.addEventListener("click", (e) => {
-      if (
-        e.target.classList.contains("nav-link") ||
-        e.target.classList.contains("support-btn")
-      ) {
-        burgerBtnRef.classList.toggle("open");
-        mobileMenuRef.classList.toggle("is-hidden");
-      }
-    });
-
-    burgerBtnRef.addEventListener("click", () => {
-      burgerBtnRef.classList.toggle("open");
-      mobileMenuRef.classList.toggle("is-hidden");
-    });
-  };
-
   let currentLang = ua;
   console.log("Init script");
 
   window.addEventListener("DOMContentLoaded", (event) => {
-    initMenu();
-
     console.log("resources ARE LOADED!");
 
     const switchLang = document.getElementById("language-switcher");
