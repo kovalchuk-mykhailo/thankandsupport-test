@@ -26,7 +26,7 @@ import en from "../locals/en.json" assert { type: "json" };
   let currentLang = ua;
   console.log("Init script");
 
-  window.addEventListener("load", (event) => {
+  window.addEventListener("DOMContentLoaded", (event) => {
     initMenu();
 
     console.log("resources ARE LOADED!");
